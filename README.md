@@ -40,7 +40,11 @@ $ cd task3
    * テスト済み：3.7~3.10  
 * Ubuntu 20.04  
 
+## テスト環境  
+* [test](https://github.com/Sousaiky/task3/blob/main/test.bash)  
+
 ## 著作権・ライセンス  
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。  
+* [LICENSE](https://github.com/Sousaiky/task3/blob/main/LICENSE)  
 
 © 2024 Soshi Saiki 
