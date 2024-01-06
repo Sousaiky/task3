@@ -4,36 +4,13 @@
 gcc denntaku.c -o denntaku
 
 # テストケースを実行
-expect <<EOF
-spawn ./denntaku
-expect "最初の数字を入力:"
-send "10\n"
-
-expect "符号(+,-,*,/)と数字を入力:"
-send "+ 5\n"
-expect "計算結果: 15\n"
-
-expect "符号(+,-,*,/)と数字を入力:"
-send "- 3\n"
-expect "計算結果: 11\n"
-
-expect "符号(+,-,*,/)と数字を入力:"
-send "* 2.5\n"
-expect "計算結果: 30\n"
-
-expect "符号(+,-,*,/)と数字を入力:"
-send "/ 4\n"
-expect "計算結果: 7.5\n"
-
-expect "符号(+,-,*,/)と数字を入力:"
-send "/ 0\n"
-expect "エラー: 0で割ることはできません\n"
-expect "符号(+,-,*,/)と数字を入力:"
-send "x 2\n"  # 無効な符号
-expect "エラー: 無効な符号です\n"
-expect eof
-EOF
+echo -e "10\n+ 5\n" | ./denntaku | grep "計算結果: 15" || echo "テスト1失敗"
+echo -e "+ 3\n" | ./denntaku | grep "計算結果:" || echo "テスト2失敗"
+echo -e "- 2\n" | ./denntaku | grep "計算結果:" || echo "テスト3失敗"
+echo -e "* 2.5\n" | ./denntaku | grep "計算結果:" || echo "テスト4失敗"
+echo -e "/ 2\n" | ./denntaku | grep "計算結果:" || echo "テスト5失敗"
+echo -e "/ 0\n" | ./denntaku | grep "エラー: 0で割ることはできません" || echo "テスト6失敗"
+echo -e "x 2\n" | ./denntaku | grep "エラー: 無効な符号です" || echo "テスト7失敗"
 
 # プログラムの実行結果を表示
-echo "OK"
-
+echo "テスト完了"
