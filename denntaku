@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# PSDX-FileCopyrightText: 2023 Soshi Saiki
+# SPDX-License-Identifier: BSD-3-Clause
 
 try:
     a =  float(input("最初の数字を入力: "))
@@ -8,7 +10,7 @@ except ValueError:
 
 while True:
     try:
-        s, b = input("符号(+,m,*,/)と数字を入力: ").split()
+        s, b = input("符号(+,m,*,/)と半角スペース後に数字を入力: ").split()
         b = float(b)
     except ValueError:
         print("エラー: 正しい形式で入力してください")
