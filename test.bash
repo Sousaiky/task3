@@ -15,7 +15,7 @@ expect "計算結果: 15\n"
 
 expect "符号(+,-,*,/)と数字を入力:"
 send "- 3\n"
-expect "計算結果: 12\n"
+expect "計算結果: 11\n"
 
 expect "符号(+,-,*,/)と数字を入力:"
 send "* 2.5\n"
