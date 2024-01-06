@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 
 # Pythonスクリプトのパス
 python_script="denntaku"
