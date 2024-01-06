@@ -5,7 +5,8 @@
 ## 概要  
 このリポジトリのプログラムは、数字を入力すると四則演算をするコマンドです。  
 
-## ダウンロード方法  
+## ダウンロード方法 
+以下のコマンドを入力し、実行してください   
 ```
 $ git clone git@github.com:Sousaiky/task3.git
 $ cd task3
@@ -46,5 +47,6 @@ $ cd task3
 ## 著作権・ライセンス  
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。  
 * [LICENSE](https://github.com/Sousaiky/task3/blob/main/LICENSE)  
+
 
 © 2024 Soshi Saiki 
